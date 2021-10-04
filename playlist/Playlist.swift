@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Playlist {
-    
+struct Playlist: Identifiable {
+    var name: String
+    var songs: [Song] = []
+    var id = UUID()
 }

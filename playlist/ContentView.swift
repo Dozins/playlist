@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var playlists = [
+        Playlist(name: "October",
+        songs: [Song(title: "I'm sleepy", artist: "Me"),
+        Song(title: "I'm so sleepy", artist: "Rick")
+                                          
+                                         ])
+    ]
     var body: some View {
         Text("Hello, world!")
             .padding()
