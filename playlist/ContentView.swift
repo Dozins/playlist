@@ -14,7 +14,7 @@ struct ContentView: View {
         Song(title: "Kira-Kira Days", artist: "K-ON")
                                           
                ]),
-        Playlist(name: "꽁",
+        Playlist(name: "똥",
         songs: [Song(title: "Window", artist: "Joji"),
         Song(title: "deez nuts", artist: "deez nuts")
                                           
