@@ -10,14 +10,25 @@ import SwiftUI
 struct ContentView: View {
     @State var playlists = [
         Playlist(name: "October",
-        songs: [Song(title: "I'm sleepy", artist: "Me"),
-        Song(title: "I'm so sleepy", artist: "Rick")
+        songs: [Song(title: "Guitar Teacher", artist: "Joji"),
+        Song(title: "Kira-Kira Days", artist: "K-ON")
+                                          
+               ]),
+        Playlist(name: "꽁",
+        songs: [Song(title: "Window", artist: "Joji"),
+        Song(title: "deez nuts", artist: "deez nuts")
                                           
                                          ])
     ]
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(playlists) {playlist in
+                NavigationLink(destination: PlaylistView()){
+                    Text(playlist.name)
+                }
+            }
+            .navigationTitle("My Playlists")
+        }
     }
 }
 
